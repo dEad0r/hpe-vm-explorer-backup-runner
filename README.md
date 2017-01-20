@@ -8,7 +8,7 @@ It was tested with version 6.3. The script is designed for the Windows command l
 Create a copy of the login payload file:
 
 ```bash
-copy payload/payload-login.json.example payload/payload-login.json
+copy payload\payload-login.json.example payload\payload-login.json
 ```
 
 In this new file, replace HPE_USER and HPE_PASSWORD with your username and password for the GUI access.
@@ -21,7 +21,7 @@ The payload-task.json.example is provided for illustration purposes. To create a
 
 If you're *not* running this script on the same machine where HPE explorer is installed, adjust the variable *host* in runbackup.cmd
 Execute runbackup.cmd whenever you want to backup your VM.
-You may need to add the parameter --insecure if you haven't yet set up a properly signed SSL/TLS certificate on your server and urgently need to test this script. Simply replace the following line
+You may need to add the parameter --insecure if you haven't yet set up a properly signed SSL/TLS certificate on your server and urgently need to test this script. In runbackup.cmd, simply replace the line
 ```bash
 curl -X POST https://%host%/PerformTask^
 ```
